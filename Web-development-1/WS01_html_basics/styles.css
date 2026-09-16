@@ -1,0 +1,36 @@
+body {
+    font-family: "JetBrains Mono", monospace;
+
+    max-width: 800px;
+    background-color: #c89696;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #c82828;
+    font-size: 36px;
+    text-align : center;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #201010;
+    font-size: 18px;
+    line-height: 1.6;
+}
+    
+img {
+    max-width: 100%;
+    width: 200px;
+    border-radius: 10px;
+    border-left: 5px solid hsl(299, 97%, 59%);
+    border-right: 5px solid hsl(299, 97%, 59%);
+    border-top: 5px solid hsl(299, 59%, 32%);
+    border-bottom: 5px solid hsl(299, 97%, 59%);
+}
+a {
+    color: #a42020;
+    text-decoration: none;
+    
+}
