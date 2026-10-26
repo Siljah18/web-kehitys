@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WS05 - Animal Care</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Animal Care and Sponsorship</h1>
+        <p>Take care of animals and calculate sponsorship costs.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Add an Animal</h2>
+
+            <form id="animalForm">
+                <div>
+                    <label for="animalName">Animal name:</label>
+                    <input type="text" id="animalName" name="animalName">
+                    <p id="nameError" class="error"></p>
+                </div>
+
+                <div>
+                    <label for="animalSpecies">Species:</label>
+                    <input type="text" id="animalSpecies" name="animalSpecies">
+                    <p id="speciesError" class="error"></p>
+                </div>
+
+                <div>
+                    <label for="careNote">Care note (max 150 characters):</label>
+                    <textarea id="careNote" name="careNote" maxlength="300"></textarea>
+                    <p id="noteError" class="error"></p>
+                </div>
+
+                <button type="submit">Save Animal</button>
+                <p id="formResult" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section>
+            <h2>Sponsorship Calculator</h2>
+
+            <form id="sponsorForm">
+                <div>
+                    <label for="animalType">Choose an animal:</label>
+                    <select id="animalType" name="animalType">
+                        <option value="10">Elephant - €10/year</option>
+                        <option value="15">Penguin - €15/year</option>
+                        <option value="20">Panda - €20/year</option>
+                        <option value="25">Tiger - €25/year</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="years">Number of years:</label>
+                    <input
+                        type="number"
+                        id="years"
+                        name="years"
+                        min="1"
+                        step="1"
+                        value="1"
+                    >
+                </div>
+
+                <button type="submit">Calculate Cost</button>
+
+                <p id="cost" aria-live="polite"></p>
+                <p id="discountMessage" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section>
+            <h2>Saved Animal</h2>
+
+            <p id="savedAnimal" aria-live="polite">
+                No saved animal yet.
+            </p>
+
+            <button type="button" id="loadAnimal">
+                Load Saved Animal
+            </button>
+
+            <button type="button" id="clearAnimal">
+                Clear Saved Animal
+            </button>
+        </section>
+    </main>
+
+    <footer>
+        <p>WS05 - Web Development 1</p>
+    </footer>
+</body>
+</html>

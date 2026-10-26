@@ -1,0 +1,155 @@
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --ink: #20312d;
+  --muted: #5e6f68;
+  --paper: #f5f7f2;
+  --green: #973b9f;
+  --green-dark: #73c8ea;
+  --line: #dce5dc;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  width: min(100% - 2rem, 900px);
+  margin: auto;
+}
+
+.site-header {
+  padding: 3rem 0;
+  color: white;
+  background: linear-gradient(135deg, #245c45, #43866a);
+}
+
+.eyebrow {
+  color: #f8dba9;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.2;
+}
+
+main {
+  padding: 2rem 0;
+}
+
+.panel {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 5px 20px rgb(0 0 0 / 5%);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  margin: 1rem 0 0.3rem;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #bac9bf;
+  border-radius: 8px;
+  font: inherit;
+  background: white;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid #b8dec8;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border: 0;
+  border-radius: 8px;
+  color: white;
+  background: var(--green);
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--green-dark);
+}
+
+button.secondary {
+  color: var(--green-dark);
+  background: #e7f0e9;
+}
+
+#form-message {
+  color: var(--green-dark);
+}
+
+#calculator-result {
+  padding: 1rem;
+  border-radius: 8px;
+  background: #f8f1e3;
+  font-weight: bold;
+}
+
+#request-list {
+  padding: 0;
+  list-style: none;
+}
+
+#request-list li {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+#request-list h3 {
+  margin-top: 0;
+}
+
+footer {
+  padding: 1.5rem 0;
+  color: var(--muted);
+  background: #e9eee8;
+}
+
+@media (min-width: 650px) {
+  #care-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 1rem;
+  }
+
+  #care-form label,
+  #care-form input,
+  #care-form select,
+  #care-form textarea,
+  #care-form button,
+  #care-form #form-message {
+    grid-column: span 2;
+  }
+}
