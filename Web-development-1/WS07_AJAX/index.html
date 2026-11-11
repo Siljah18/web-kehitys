@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WS07 AJAX</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <h1>WS07 - AJAX ja JSON</h1>
+
+    <section>
+        <h2>Tehtävä 1: JSON-tietojen käsittely</h2>
+
+        <button id="namesButton">Näytä vain etu- ja sukunimi</button>
+        <button id="allButton">Näytä kaikki tiedot</button>
+
+        <div id="jsondata"></div>
+    </section>
+
+    <section>
+        <h2>Tehtävä 2: Elokuvien hakeminen</h2>
+
+        <button id="rawButton">Lataa raaka data</button>
+        <button id="parseButton">Lataa ja parsi data</button>
+
+        <div id="rawdata"></div>
+    </section>
+
+    <section>
+        <h2>Tehtävä 3: Säätietojen hakeminen</h2>
+
+        <button id="fetchWeather">Hae data</button>
+
+        <label for="city">Valitse kaupunki:</label>
+        <select id="city">
+            <option value="Helsinki">Helsinki</option>
+            <option value="Stockholm">Stockholm</option>
+            <option value="Rome">Rome</option>
+            <option value="New York">New York</option>
+        </select>
+
+        <label for="citysearch">Tai hae kaupunkia:</label>
+        <input type="text" id="citysearch" placeholder="Kirjoita kaupungin nimi">
+        <button id="search">Hae</button>
+
+        <div id="weatherdata">Säätiedot näkyvät tässä.</div>
+    </section>
+
+</body>
+</html>
